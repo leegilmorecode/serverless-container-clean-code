@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "739fa372-f347-4076-98c3-26e7c540ce39",
+    "name": "Serverless Containers and Functions",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Function - Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderTotal\": 150.50,\n  \"orderStatus\": \"VALID\",\n  \"orderLines\": [\n    {\n      \"quantity\": 2,\n      \"productId\": \"67890\",\n      \"total\": 50.25\n    },\n    {\n      \"quantity\": 3,\n      \"productId\": \"23456\",\n      \"total\": 100.25\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.eu-west-1.amazonaws.com/prod/orders/",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Orders Service - API Version",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.eu-west-1.awsapprunner.com/",
+          "protocol": "https",
+          "host": ["your-rest-id", "eu-west-1", "awsapprunner", "com"],
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Orders Service - Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.eu-west-1.awsapprunner.com/health-check",
+          "protocol": "https",
+          "host": ["your-rest-id", "eu-west-1", "awsapprunner", "com"],
+          "path": ["health-check"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Orders Service - Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderTotal\": 150.50,\n  \"orderStatus\": \"VALID\",\n  \"orderLines\": [\n    {\n      \"quantity\": 2,\n      \"productId\": \"67890\",\n      \"total\": 50.25\n    },\n    {\n      \"quantity\": 3,\n      \"productId\": \"23456\",\n      \"total\": 100.25\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.eu-west-1.awsapprunner.com/orders",
+          "protocol": "https",
+          "host": ["your-rest-id", "eu-west-1", "awsapprunner", "com"],
+          "path": ["orders"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
